@@ -78,7 +78,7 @@ class ProviderData {
 
         object RawData {
 
-            //; source: https://api-gbv.org/wp-content/uploads/2019/06/API-demographics-identities-May-2019.pdf
+            // source: https://api-gbv.org/wp-content/uploads/2019/06/API-demographics-identities-May-2019.pdf
             val originGroupsToCountries = hashMapOf(
                 "central asia" to listOf(
                     "afghani",
