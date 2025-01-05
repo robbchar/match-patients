@@ -1,0 +1,18 @@
+<div class="root">
+  <div class="item-container">
+    <main>
+      <section>
+        <h1>Find Doctors</h1>
+        <app-patient-input-form
+          (buttonClicked)="onButtonClicked($event)"
+        ></app-patient-input-form>
+      </section>
+      <section class="provide-profiles">
+        <app-provider-profile
+          *ngFor="let provider of providers"
+          [provider]="provider"
+        ></app-provider-profile>
+      </section>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.root {
+  display: grid;
+  grid-template-columns:
+    [viewport-start] minmax(1em, 1fr)
+    [container-start] minmax(0, 70rem) [container-end]
+    minmax(1em, 1fr) [viewport-end];
+  background-color: hsla(42, 100%, 35.29%);
+
+  .item-container {
+    grid-column: container;
+    display: flex;
+    background-color: hsl(27.5, 100%, 95.29%);
+    box-shadow:
+      0 9px 0px 0px white,
+      0 -9px 0px 0px white,
+      12px 0 15px -4px rgba(97, 68, 0, 0.8),
+      -12px 0 15px -4px rgba(97, 68, 0, 0.8);
+    .sidebar {
+      height: 100vh;
+      padding-left: 1rem;
+      width: 15rem;
+      h1 {
+      }
+    }
+
+    main {
+      padding: 1rem;
+      height: 100vh;
+      overflow-y: auto;
+      flex: 1;
+    }
+  }
+}

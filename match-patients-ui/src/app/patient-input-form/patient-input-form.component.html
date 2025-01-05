@@ -1,0 +1,106 @@
+<label>
+  Select your areas of concern:
+  <ng-select
+    [items]="areasOfConcern"
+    bindLabel="name"
+    [(ngModel)]="selectedAreasOfConcern"
+    [multiple]="true"
+  >
+  </ng-select>
+</label>
+
+<label>
+  Select your preferred treatment modality:
+  <ng-select
+    [items]="treatmentModalities"
+    bindLabel="name"
+    [(ngModel)]="selectedTreatmentModalities"
+    [multiple]="true"
+  >
+  </ng-select>
+</label>
+
+<h3>Select your demographics:</h3>
+<label>
+  Where is your family originally from?
+  <ng-select
+    [items]="originGroup"
+    bindLabel="name"
+    [(ngModel)]="selectedOriginGroup"
+  >
+  </ng-select>
+</label>
+
+<label>
+  What is your religious faith?
+  <ng-select
+    [items]="religiousFaith"
+    bindLabel="name"
+    [(ngModel)]="selectedReligiousFaith"
+  >
+  </ng-select>
+</label>
+
+<label>
+  What is your sexual orientation?
+  <ng-select
+    [items]="sexualOrientations"
+    bindLabel="name"
+    [(ngModel)]="selectedSexualOrientation"
+  >
+  </ng-select>
+</label>
+
+<h3>Select are the preferred demographics of your therapist:</h3>
+
+<label>
+  Where should your therapist's family originally be from?
+  <ng-select
+    [items]="therapistOriginGroup"
+    bindLabel="name"
+    [(ngModel)]="selectedTherapistOriginGroup"
+  >
+  </ng-select>
+</label>
+
+<label>
+  What religious faith should your therapist have?
+  <ng-select
+    [items]="therapistReligiousFaith"
+    bindLabel="name"
+    [(ngModel)]="selectedTherapistReligiousFaith"
+  >
+  </ng-select>
+</label>
+
+<label>
+  What sexual orientation should your therapist have?
+  <ng-select
+    [items]="therapistSexualOrientations"
+    bindLabel="name"
+    [(ngModel)]="selectedTherapistSexualOrientation"
+  >
+  </ng-select>
+</label>
+
+<label>
+  Select your location:
+  <ng-select
+    [items]="locations"
+    bindLabel="name"
+    [(ngModel)]="selectedLocation"
+  >
+  </ng-select>
+</label>
+
+<label>
+  Select your payment method:
+  <ng-select
+    [items]="paymentMethods"
+    bindLabel="name"
+    [(ngModel)]="selectedPaymentMethod"
+  >
+  </ng-select>
+</label>
+<label class="error-text" *ngIf="errorText">{{ errorText }}</label>
+<button (click)="onSave()">Match to Providers</button>
