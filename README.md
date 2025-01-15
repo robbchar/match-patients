@@ -2,9 +2,9 @@
 A program that allows a patient to make various selections (their demographics, therapy preferences) to use in matching them with potential therapists.
 
 ## Dependencies
-jdk v21
-gradle v8.12
-node v22.12.0 (optional unless you want to run the fe separately as the main build will install this)
+- jdk v21
+- gradle v8.12
+- node v22.12.0 (optional unless you want to run the fe separately as the main build will install this)
 
 ## Steps to run
 Once the dependencies are installed you can run `./gradlew bootRun` from the root directory of the project which will build the front end and place it where the backend will pick it up and use for the pages that get served.
