@@ -1,7 +1,20 @@
 # Match Patients
 A program that allows a patient to make various selections (their demographics, therapy preferences) to use in matching them with potential therapists.
-## Setup
-This application uses Java 21, and Gradle to build the application in general. The front end is an angular 19 application and was built using node v22.12.0 (there is an .nvmrc file in the match-patients-ui directory if nvm is used to manages node versions). Once node is installed running `npm i` in the match-patients-ui director should download all the dependencies for the fe to build. You do not have to install anything for the front end beyond node, and even that _should_ be installed by the build, running the main spring boot application will build and copy the angular app to where the spring boot application can serve the page. Once you pull the code locally and setup spring, node, and java 21 run `./gradlew bootRun` from the `match-patients/` directory which will start everything, just navigate to http://localhost:8080 to use the application.
+
+## Dependencies
+jdk v21
+gradle v8.12
+node v22.12.0 (optional unless you want to run the fe separately as the main build will install this)
+
+## Steps to run
+Once the dependencies are installed you can run `./gradlew bootRun` from the root directory of the project which will build the front end and place it where the backend will pick it up and use for the pages that get served.
+
+## Alternate method
+You can run each separately, if say you want to develop the front end without having to re-build the backend, to do this run the backend as above and for the front end open a new terminal window and run `npm i` and then `npm run start` from the 'match-patients-ui' directory. This will run the front end at http://localhost:4200/ which will automatically proxy to the backend which is running at http://localhost:8080/.
+
+## Description
+The project is a multi-module Spring Boot setup which allows for the backend and frontend to be developed and worked on separately.
+
 ## Approach
 ### Matching
 Once the patient makes selections and submits them the matching begins:
