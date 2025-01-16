@@ -1,6 +1,9 @@
 # Match Patients
 A program that allows a patient to make various selections (their demographics, therapy preferences) to use in matching them with potential therapists.
 
+## Description
+The project is a multi-module Spring Boot setup which allows for the backend and frontend to be developed and worked on separately.
+
 ## Dependencies
 - jdk v21
 - gradle v8.12
@@ -10,10 +13,7 @@ A program that allows a patient to make various selections (their demographics, 
 Once the dependencies are installed you can run `./gradlew bootRun` from the root directory of the project which will build the front end and place it where the backend will pick it up and use for the pages that get served.
 
 ## Alternate method
-You can run each separately, if say you want to develop the front end without having to re-build the backend, to do this run the backend as above and for the front end open a new terminal window and run `npm i` and then `npm run start` from the 'match-patients-ui' directory. This will run the front end at http://localhost:4200/ which will automatically proxy to the backend which is running at http://localhost:8080/.
-
-## Description
-The project is a multi-module Spring Boot setup which allows for the backend and frontend to be developed and worked on separately.
+You can run each module separately, if say you want to develop the front end without having to re-build the backend for each change. To do this run the backend as above and for the front end open a new terminal window and run `npm i` and then `npm run start` from the 'match-patients-ui' directory. This will run the front end at http://localhost:4200/ which will automatically proxy to the backend which is running at http://localhost:8080/.
 
 ## Approach
 ### Matching
